@@ -1,0 +1,7 @@
+<div *ngFor="let tweet of twat">
+        <div [ngClass]="{'tweet' :true, 'wrong' :isWordIn(tweet.text,'Witch Hunt')}">
+            <p class="date">{{ tweet.date | date : "dd/MM-yyyy HH:mm" }}</p>
+            <p class="text">{{ tweet.text }}</p>
+            <p [ngClass]="{'likes' :tweet.likes <= 200000, 'superlikes' :tweet.likes > 200000}"><i class="glyphicon glyphicon-thumbs-up"></i>{{ tweet.likes }}</p>
+        </div>
+<div>
